@@ -93,7 +93,6 @@
 @media (max-width: 440px) {
   .container{
     width: 310px;
-    display: none;
     height: 110px;
     background-image: none;
     border: 1.5px solid rgba(255, 255, 255, 0.141);
@@ -103,9 +102,8 @@
     transition: all .4s;
     
     z-index: 1;
-    position: r;
-    right: 50%;
-    bottom: 10%px;
+    right: -60%;
+    bottom: -9%;
 
     transform: translate(-50%, -50%);
 
@@ -119,7 +117,7 @@
         font-family: "Poppins", sans-serif;
         font-weight: 500;
         color: rgb(170, 170, 170);
-        font-size: 11px;
+        font-size: 8px;
     }
 }
 

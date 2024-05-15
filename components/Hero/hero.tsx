@@ -26,9 +26,7 @@ export default function HeroBg() {
         // if its true then set the nav state to be Home (hero)
             if (isInView){
                 dispatch(setNavbarState("Home"))
-                console.log("At Hero Section")
             }
-        console.log("Rendering =>", navState)
     }, [isInView])
 
     useEffect(() => {
@@ -62,7 +60,6 @@ export default function HeroBg() {
                     <p>I'm Manu</p>
                     <p>Welcome To</p>
                     <p style={{color: "#0FC06B", fontWeight: "700"}}>My Portfolio</p>
-
                 </div>
             </div>   
 

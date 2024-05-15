@@ -21,9 +21,7 @@ const About = () => {
     useEffect(() =>{
             if (isInView){
                 dispatch(setNavbarState("About"))
-                console.log("At About Section")
             }
-        console.log("Rendering =>", navState)
     }, [isInView])
 
     const x = useTransform(scrollYProgress, [0, 1], [-510, 600]);

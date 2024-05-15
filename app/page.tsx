@@ -22,14 +22,9 @@ import Footer from "@/components/Footer/footer";
 
 export default function Home() {
 
-  async function startk() {
-    console.log("Weather Data ->", await getWeatherData('Delhi'))
-  }
 
   useEffect(() =>{
-    const start = async ()  => {
-      await startk()
-    }
+  
     const lenis = new Lenis()
 
     function raf(time: number) {
@@ -38,8 +33,6 @@ export default function Home() {
       requestAnimationFrame(raf)
 
     }
-
-    start()
     requestAnimationFrame(raf)
   })
 
