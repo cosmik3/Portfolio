@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import styles from './player.module.scss'
-import Image from 'next/image'
-import { BsSpotify } from 'react-icons/bs'
 import {  LastPlayedSong, CurrentMusic, getAccessToken, getNowPlaying, getRecentlyPlayed, getSpotifyMusicStatus } from '../../spotify/SpotifyAPI'
-import { clipText } from '@/utils/TextCliper'
 import CurrentlyPlaying from './currentlyPlaying'
 import RecentlyPlayedSong from './lastPlayedSong'
 

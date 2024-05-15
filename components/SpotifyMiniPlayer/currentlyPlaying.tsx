@@ -1,7 +1,7 @@
 import { CurrentMusic } from "@/spotify/SpotifyAPI"
 import styles from "./player.module.scss"
 import Image from "next/image"
-import { clipText } from "@/utils/TextCliper"
+import { clipText } from "@/Utils/TextCliper"
 import { BsSpotify } from "react-icons/bs"
 import { ThreeDotsLoading } from "../UI/Indicators/Loading"
 
