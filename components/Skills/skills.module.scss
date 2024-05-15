@@ -1,8 +1,8 @@
 .container{
     position: relative;
-    height: 100vh;
     width: 100%;
-    margin-top: 100px;
+    margin-top: 80px;
+    margin-bottom: 80px;
     overflow: hidden;
 
     
@@ -33,9 +33,9 @@
     margin: 0px;
     width: 640px;
     height: 230px;
-   //  background-color: rgba(0, 0, 0, 0.241);
-   //  overflow: hidden;
-   //  border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(0, 0, 0, 0.241);
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 6px;
  } 
 
@@ -122,3 +122,27 @@
      }
  }
  
+
+ @media (max-width: 440px) {
+  .lineMask p{
+    font-size: 2.4rem;
+    padding: 0 15px;
+  }
+
+  .skillCard{
+    width: 700px;
+    height: auto;
+    padding-bottom: 15px;
+  }
+
+  .skillsContainer{
+    padding: 0 15px;
+
+  }
+
+  .container{
+    height: auto;
+
+  }
+
+ }

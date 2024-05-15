@@ -174,12 +174,12 @@
 
   .svgIcon1{
     position: absolute;
-    height: 260px;
+    height: 600px;
     object-fit: fill;
     z-index: -2;
-    width: 260px;
-    right: 10%;
-    bottom: -4%;
+    width: 600px;
+    right: -4%;
+    top: -4%;
 
   }
 
@@ -198,3 +198,71 @@
 
 
   
+  @media (max-width: 440px) {
+
+    .middleTitle{
+      font-style: italic;
+      color: #0FC06B;
+    }
+    
+    .boldTitle{
+        font-size: 60px;
+ 
+    
+        h1{
+          width: 100%;
+        }
+      }
+
+      .innerAboutMeContainer{
+        flex-direction: column;
+        padding: 0 30px;
+
+
+        .imageContainer{
+          width: 100%;   
+
+      }
+
+
+      .aboutMeText{
+        width: 100%;
+       
+  
+        .textContainer{
+          gap: 0px;
+  
+  
+          p{
+            font-size: 1.1rem;
+            line-height: 41px;
+            letter-spacing: 1.07px;
+          }
+        }
+      }
+    }
+
+    .svgIcon1{
+      top: -2%;
+  
+    }
+
+    .svgIcon{
+      top: 12%;
+    }
+
+    .outerAboutMeConatiner{
+      padding: 0 20px;
+  
+      .textBoxContainer{
+        .innerTextBoxContainer{
+          width: 100%;
+          p{
+            line-height: 35px;
+          }
+        }
+  
+      }
+    }
+  
+  }

@@ -1,8 +1,11 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { motion, useInView, useScroll, useTransform } from 'framer-motion';
 import styles from './about.module.scss';
-import Blobs from '../Blob/blob';
+import Blobs from '../UI/Blob/blob';
 import Image from 'next/image';
+import { useDispatch, useSelector } from 'react-redux';
+import { getNavState } from '@/redux/reducer/NavbarStateSelector';
+import { setNavbarState } from '@/redux/reducer/NavbarStateReducer';
 
 
 
@@ -11,7 +14,17 @@ const About = () => {
     const target = useRef<HTMLDivElement | null>(null)    
     const { scrollYProgress } = useScroll();
 
-    const isInView = useInView(target, { once : true });
+    const isInView = useInView(target);
+    const dispatch = useDispatch()
+    const navState = useSelector(getNavState)
+
+    useEffect(() =>{
+            if (isInView){
+                dispatch(setNavbarState("About"))
+                console.log("At About Section")
+            }
+        console.log("Rendering =>", navState)
+    }, [isInView])
 
     const x = useTransform(scrollYProgress, [0, 1], [-510, 600]);
     const y = useTransform(scrollYProgress, [0, 1], [130, -190]);
@@ -27,7 +40,7 @@ const About = () => {
 
 
     return (
-        <div ref={target} className={styles.container}>
+        <div id='About' ref={target} className={styles.container}>
             <div className={styles.innerContainer}>
 
                 <div className={styles.boldTitle}>
@@ -47,7 +60,7 @@ const About = () => {
 
                         <div className={styles.aboutMeText}>
                             <div className={styles.textContainer}>
-                                <p>My name is <span className='text-[3rem] font-medium'>Manu Rajbhar</span>, but you can call me MR :) I am a <span className='text-[3rem] font-medium'>Software Developer</span> interested in building iOS and web apps, coding video games, and training machine learning models.</p>
+                                <p>My name is <span className='text-[3rem] font-medium max-sm:text-[1.4rem]'>Manu Rajbhar</span>, but you can call me MR :) I am a <span className='text-[3rem] font-medium max-sm:text-[1.4rem]'>Software Developer</span> interested in building iOS and web apps, coding video games, and training machine learning models.</p>
                                 {/* <p>I love modern Swift and my major programming languages are Swift and Typescript I have a lot of experience in SwifUI, UIKit, React.js, and Next.js, and I have been coding for a long time.</p> */}
                             </div>
                         </div>
@@ -96,7 +109,7 @@ const About = () => {
         className={`${styles.svgIcon}`}>
             <Image fill alt="Hello" src={"/icons/smile.svg"}/>
         </div>
-        {/* <div 
+        <div 
         style={{
             transform: isInView ? "none" : "translateX(200px)",
             opacity: isInView ? 1 : 0,
@@ -104,8 +117,8 @@ const About = () => {
             transition: "all 1.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
           }}
         className={`${styles.svgIcon1}`}>
-            <Image fill alt="Hello" src={"/icons/star.svg"}/>
-        </div> */}
+            <Image fill alt="Hello" src={"/icons/smile.svg"}/>
+        </div>
 
         </div>
     );

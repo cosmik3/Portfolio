@@ -173,7 +173,7 @@
 
 @media (max-width: 440px) {
   .myIntro{
-    font-size: 3.1rem;
+    font-size: 2.1rem;
     text-align: center;
   }
 
@@ -192,4 +192,46 @@
   .heroBackground{
     opacity: 0.4;
   }
+
+  .introTextContainer{
+    width: 100%;
+    // background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+  
+  
+    .innerTextContainer{
+      margin-bottom: 40px;
+  
+      p{
+        font-size: 3.4rem;
+        letter-spacing: 5px;
+        line-height: 45px;
+      }
+    }  
+  } 
+
+  .svgIcon{
+    position: absolute;
+    height: 300px;
+    object-fit: fill;
+    z-index: -2;
+    width: 300px;
+  }
+
+
+.svgIcon7{
+  bottom: -2%;
+  left: 7%;
+}
+
+
+.svgIcon1{
+  bottom: 8%;
+  right: -20%;
+}
+
+
 }

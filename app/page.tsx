@@ -10,10 +10,13 @@ import Skills from "@/components/Skills/skillSection";
 import ImageGallery from "@/components/ImageGallery/imageGallery";
 import { getWeatherData } from "@/hooks/getWeatherData";
 import  AnimatedCursor from "react-animated-cursor"
-import CursorFollowingBlob from "@/components/Blob/cursorFollowingBlob";
+import CursorFollowingBlob from "@/components/UI/Blob/cursorFollowingBlob";
 import Particles from "@/animations/Particles/particles";
 import ProgressBar from "@/components/UI/ProgressBar/progressBar";
 import Projects from "@/components/Projects/projects";
+import { Provider } from "react-redux";
+import store from "@/redux/store/store";
+import Footer from "@/components/Footer/footer";
 
 
 
@@ -43,9 +46,9 @@ export default function Home() {
 
   return (
     <main className="relative h-screen">
-    {/* Fixed ELements */}
+    <Provider store={store}>
       <CursorFollowingBlob/>
-      <AnimatedCursor 
+      {/* <AnimatedCursor 
          innerSize={8}
          outerSize={55}
          innerScale={2}
@@ -57,13 +60,15 @@ export default function Home() {
          outerStyle={{
            border: '2px solid #0FC06B'
          }}
-       />
+       /> */}
       <Nav/>
       <Hero/>
       <About/>
       <Experience/>
       <Skills/>
-      <Projects/>  
+      <Projects/> 
+      <Footer/>
+    </Provider> 
     </main>
   );
 }

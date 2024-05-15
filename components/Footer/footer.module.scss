@@ -1,0 +1,135 @@
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    
+}
+
+.headerTitle{
+    margin-top: 160px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h1{
+        text-align: center;
+        font-family: "Poppins", sans-serif;
+        font-size: 5rem;
+    }
+
+    .email{
+        font-family: "Poppins", sans-serif;
+        font-size: 2rem;
+        font-weight: 300;
+        border-radius: 50px;
+        border: 1.4px solid grey;
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+        background-color: #000000;
+        transition: all .7s;
+        padding: 20px 40px;
+        margin-top: 60px;
+
+
+
+        &:hover{
+            background-color: #0FC06B;
+            border: 1.4px solid rgb(255, 255, 255);
+
+        }
+
+    }
+}
+
+.innerContainer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+
+    .socialLinks{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        cursor: pointer;
+        
+        .link{
+            transition: color .6s;
+            &:hover{
+
+                color: #0FC06B;
+            }
+        }
+
+       
+    }
+}
+
+.copyright{
+    position: absolute;
+    left: 50%;
+    bottom: 2%;
+    font-size: 1.1rem;
+    transform: translate(-50%, -50%);
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    color: #0FC06B;
+    text-align: center;
+    letter-spacing: 1px;
+
+}
+
+.svgIcon1{
+    position: absolute;
+    height: 600px;
+    object-fit: fill;
+    z-index: 2;
+    width: 600px;
+    right: -12%;
+    top: -11%;
+
+  }
+
+
+  @media (max-width: 440px) {
+
+    .container{
+        margin-top: 100px;
+    }
+    .headerTitle{
+    .email{
+        font-size: 1.2rem;
+        padding: 10px 30px;
+        margin-top: 60px;
+    }
+    }
+
+
+.svgIcon1{
+    top: -16%;
+
+  }
+
+  .innerContainer{
+    margin-top: 30px;
+}
+
+.headerTitle{
+    margin-top: 80px;
+
+    .email{
+        margin-top: 40px;
+
+    }
+}
+
+  }

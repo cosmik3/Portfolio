@@ -4,8 +4,16 @@ export const skillsDetails = [
     name: "C++"
     },
     {
+    icon: "java.svg",
+    name: "Java"
+    },
+    {
     icon: "swift.svg",
     name: "Swift"
+    },
+    {
+    icon: "py.svg",
+    name: "Python"
     },
     {
     icon: "ts.svg",
@@ -14,14 +22,6 @@ export const skillsDetails = [
     {
     icon: "js.svg",
     name: "Javascript"
-    },
-    {
-    icon: "py.svg",
-    name: "Python"
-    },
-    {
-    icon: "java.svg",
-    name: "Java"
     },
 ]
 export 
