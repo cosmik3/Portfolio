@@ -87,14 +87,13 @@ const About = () => {
 
                             <div className={styles.innerTextBoxContainer}>
                                 
-                                <p>⭐️ In my free time , here are the things that i love doing -&gt; let hobbies: [String] = [ " learning to Cook 🥘 " , " Gardening 🧑🏼‍🌾 " , " Knittin 🧶 " ]</p>
-                                <p>I'm also into snapping cool shots ✨, especially of nature 🌱. Whenever I spot something that catches my eye, I whip out my phone, fire up the camera 📸, and capture the moment.</p> 
-                                <p className='underline cursor-pointer'>If you're curious, check out my shots in the gallery section. They're pretty cool.</p> 
+                                <p>⭐️ In my free time ,i love doing things such as learning to Cook 🥘, Gardening 🧑🏼‍🌾, and Knitting 🧶. I'm also into snapping cool shots ✨, especially of nature 🌱. Whenever I spot something that catches my eye, I whip out my phone, fire up the camera 📸, and capture the moment.</p> 
+                                <p className='cursor-pointer'>If you're curious, check out my shots in the gallery section. They're pretty cool.</p> 
                             </div>      
 
                         </div>
 
-                    </div>
+                    </div> 
                 </div>
             </div>
         <div 
