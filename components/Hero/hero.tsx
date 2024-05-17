@@ -59,7 +59,7 @@ export default function HeroBg() {
                 <div className={styles.innerTextContainer}>
                     <p>I'm Manu</p>
                     <p>Welcome To</p>
-                    <p style={{color: "#0FC06B", fontWeight: "700"}}>My Portfolio</p>
+                    <p style={{color: "#0FC06B", fontWeight: "600" , fontStyle: "italic"}}>My Portfolio</p>
                 </div>
             </div>   
 
