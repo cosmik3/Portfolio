@@ -2,17 +2,11 @@
 import React, { useEffect } from "react";
 import Hero from "@/components/Hero/hero";
 import Nav from "@/components/Nav/nav";
-import Grid from "@/components/UI/Grid/grid";
 import Experience from "@/components/Experience/experience";
 import Lenis from '@studio-freight/lenis'
 import About from "@/components/About/about";
 import Skills from "@/components/Skills/skillSection";
-import ImageGallery from "@/components/ImageGallery/imageGallery";
-import { getWeatherData } from "@/hooks/getWeatherData";
-import  AnimatedCursor from "react-animated-cursor"
 import CursorFollowingBlob from "@/components/UI/Blob/cursorFollowingBlob";
-import Particles from "@/animations/Particles/particles";
-import ProgressBar from "@/components/UI/ProgressBar/progressBar";
 import Projects from "@/components/Projects/projects";
 import { Provider } from "react-redux";
 import store from "@/redux/store/store";
@@ -58,7 +52,7 @@ export default function Home() {
       <Hero/>
       <About/>
       <Experience/>
-      <Skills/>
+      {/* <Skills/> */}
       <Projects/> 
       <Footer/>
     </Provider> 
