@@ -59,12 +59,11 @@ export default function HeroBg() {
                 <div className={styles.innerTextContainer}>
                     <p>I'm Manu</p>
                     <p>Welcome To</p>
-                    <p style={{color: "#0FC06B", fontWeight: "600"}}>My Portfolio</p>
+                    <p style={{color: "#0FC06B", fontWeight: "700"}}>My Portfolio</p>
                 </div>
             </div>   
 
             <div className={styles.heroBackground}/>
-            <Player/>
             <div 
             style={{ transform: `translateY(${-scrollProgress * 8}px) 
                      translateX(${scrollProgress * 18}px)
@@ -75,7 +74,7 @@ export default function HeroBg() {
                 <Image 
                 fill alt="Hello" src={"/icons/codebrackts.svg"}/>
             </div>
-
+{/* 
             <div
             style={{ transform: `scale(${1 + (scrollProgress * 0.07)}) rotate(${-scrollProgress * 2}deg)`,
           
@@ -83,7 +82,7 @@ export default function HeroBg() {
             className={`${styles.svgIcon2} ${styles.svgIcon}`}>
                 <Image 
                 fill alt="Hello" src={"/icons/laptop.svg"}/>
-            </div>
+            </div> */}
 
             <div 
              style={{ transform: `translateY(${-scrollProgress * 8}px) 
@@ -95,9 +94,9 @@ export default function HeroBg() {
                 <Image fill alt="Hello" src={"/icons/code-sign.svg"}/>
             </div>
 
-            <div style={{ transform: `translateY(${scrollProgress * 30}px) rotate(${-scrollProgress * 5}deg)` }} className={`${styles.svgIcon4} ${styles.svgIcon}`}>
+            {/* <div style={{ transform: `translateY(${scrollProgress * 30}px) rotate(${-scrollProgress * 5}deg)` }} className={`${styles.svgIcon4} ${styles.svgIcon}`}>
                 <Image fill alt="Hello" src={"/icons/plant.svg"}/>
-            </div>
+            </div> */}
 
             <div 
             style={{ transform: `translateY(${-scrollProgress * 8}px) 
@@ -110,7 +109,7 @@ export default function HeroBg() {
             </div>
             <Logo/>
             <Particles className={styles.particlesBG}/>
-
+            <Player/>
     </div>
     
   );
