@@ -1,7 +1,6 @@
 import React, { useRef } from 'react'
 import styles from './skills.module.scss'
-import { useInView } from 'react-intersection-observer';
-import {motion} from 'framer-motion'
+import {motion, useInView} from 'framer-motion'
 import { text_reveal_animation_1, text_reveal_animation_2 } from '@/animations/TextReveal/text-reveal.cofig';
 import Image from 'next/image';
 import { FrameworksDetails, ToolsDetails, skillsDetails } from '@/database/skillsData';
@@ -10,13 +9,10 @@ const Skills = () => {
    
 
   const body = useRef<HTMLDivElement>(null);
-  const { ref, inView, entry } = useInView({
-    threshold: 0.75,
-    triggerOnce: true
-  });
+  const inView =  useInView(body, {once: true})
 
   return (
-    <div ref={ref} className={styles.container}>
+    <div ref={body} className={styles.container}>
 
         <div className={styles.lineMask}>
             <motion.p 

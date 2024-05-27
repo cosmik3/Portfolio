@@ -1,26 +1,26 @@
 .container{
-    height: 100vh;
     width: 100%;
+    margin: 60px 0;
+    height: 100vh;
 }
 
 
 .lineMask{
     overflow: hidden;
-
   }
 
 
-    
-.lineMask p{
+  .lineMask p{
     margin: 0px;
     font-family: "Poppins", sans-serif;
-    font-size: 4.4rem;
-    font-weight: 500;
+    font-size: 3.3rem;
+    font-weight: 400;
     color: white;
     letter-spacing: 1px;
     padding: 0 40px;
   
   }
+
 .innerContainer{
     display: flex;
     width: 100%;
@@ -36,6 +36,7 @@
     flex-wrap: wrap;
     width: 100%;
     align-items: flex-start;
+    justify-content: center;
     overflow: hidden;
     
 }
@@ -85,8 +86,8 @@
 
     }
 
-    .discDiv{
-        border-top: 4px solid green;
+.discDiv{
+        border-top: 4px solid #1bd760;
         width: 100%;
         height: 100%;
         padding: 15px;
@@ -102,7 +103,7 @@
         }
 
         .discription{
-             letter-spacing: 0.5px;
+            letter-spacing: 0.5px;
             font-size: 0.8rem;
         }
 
@@ -128,3 +129,28 @@
 
     
 }  
+
+
+@media (max-width: 440px) {
+    .container{
+    margin: 0 0;
+    margin-bottom: 60px;
+    height: auto; 
+    }
+
+    .projectsContainer{
+        padding: 0px 20px;
+    }
+
+    .projectsCard{
+        height: 490px;
+    }
+
+
+
+    .lineMask p{
+      font-size: 2.4rem;
+      padding: 0 15px;
+    }
+    
+}

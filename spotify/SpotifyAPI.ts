@@ -70,7 +70,6 @@ export const getAccessToken = async () =>
   
 export const getNowPlaying = async ( access_token: string ) : Promise < CurrentMusic | null > => 
 {
-    console.log(access_token)
     try {
       const response = await axios.get<CurrentMusic>(ENDPOINTS.NOW_PLAYING_ENDPOINT, {
         headers: {
@@ -86,7 +85,6 @@ export const getNowPlaying = async ( access_token: string ) : Promise < CurrentM
         const song = response.data;
       return song
     } catch (error) {
-      console.log("Error:", error);
       return null
     }
 };
@@ -102,7 +100,6 @@ export const getNowPlaying = async ( access_token: string ) : Promise < CurrentM
         }
       });
       const lastPlayedSong: LastPlayedSong = response.data.items[0].track;
-      console.log("Last played song:", lastPlayedSong);
       return lastPlayedSong;
     } catch (error) {
       console.error('Error getting last played song:', error);

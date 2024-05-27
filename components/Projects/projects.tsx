@@ -1,22 +1,19 @@
 import { text_reveal_animation_1 } from '@/animations/TextReveal/text-reveal.cofig'
-import { useInView } from 'react-intersection-observer';
 import styles from './projects.module.scss'
-import {motion} from 'framer-motion'
+import {motion, useInView} from 'framer-motion'
 import Image from 'next/image';
 import Link from 'next/link';
 import { LuGithub } from "react-icons/lu";
 import { projects } from '@/database/projectsData';
+import { useRef } from 'react';
 
 
 const Projects = () => {
-
-    const { ref, inView, entry } = useInView({
-        threshold: 0.75,
-        triggerOnce: true
-      });
+    const body  = useRef<HTMLDivElement>(null)
+    const inView =  useInView(body, {once: true})
 
   return (
-    <div ref={ref} className={styles.container}>
+    <div id='Projects' ref={body} className={styles.container}>
         <div className={styles.lineMask}>
                 <motion.p 
                 variants={text_reveal_animation_1} 
@@ -34,11 +31,11 @@ const Projects = () => {
                 initial="initial" animate={inView ? "enter" : ""}
                  key={i} className={styles.projectsCard}>
                     <div className={styles.imageDiv}>
-                        <Image src={p.img} style={{scale: "1.3"}} objectFit="cover" layout="fill" alt='recipe-book'/>
+                        <Image src={p.img} style={{scale: `${p.scale}`}} objectFit="cover" layout="fill" alt='recipe-book'/>
                         <Link className={styles.link} href={""}>See On Github <LuGithub/> </Link>
                     </div>
                     <div className={styles.discDiv}>
-                        <p>{p.name}</p>
+                        <p className='font-bold'>{p.name}</p>
                         <p className={styles.discription}>{p.discripiton}</p>
                         <div className={styles.techUsed}>
                             {p.techStack.map((t, i) =>{

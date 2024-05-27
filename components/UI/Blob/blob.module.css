@@ -55,5 +55,11 @@
 }
 
 
+@media (max-width: 640px) {
+  /* .container{
+    display: none;
+    visibility: hidden;
+  } */
+}
  
   

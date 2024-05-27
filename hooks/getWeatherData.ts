@@ -15,7 +15,6 @@ export interface WeatherData {
 
     
 export const getWeatherData = async (location: string) : Promise < WeatherData | null > => {
-    console.log(API_KEY)
       try {
         const response = await axios.get<WeatherData>(
           `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${API_KEY}&units=metric`

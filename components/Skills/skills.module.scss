@@ -1,8 +1,8 @@
 .container{
     position: relative;
-    height: 100vh;
     width: 100%;
-    margin-top: 100px;
+    margin-top: 80px;
+    margin-bottom: 80px;
     overflow: hidden;
 
     
@@ -15,17 +15,17 @@
   }
 
 
-    
-.lineMask p{
+  .lineMask p{
     margin: 0px;
     font-family: "Poppins", sans-serif;
-    font-size: 4.4rem;
-    font-weight: 500;
+    font-size: 3.3rem;
+    font-weight: 400;
     color: white;
     letter-spacing: 1px;
     padding: 0 40px;
   
   }
+
 
  .skillCard{
     z-index: 3;
@@ -33,9 +33,9 @@
     margin: 0px;
     width: 640px;
     height: 230px;
-   //  background-color: rgba(0, 0, 0, 0.241);
-   //  overflow: hidden;
-   //  border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(0, 0, 0, 0.241);
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 6px;
  } 
 
@@ -98,6 +98,7 @@
     flex-wrap: wrap;
     margin-top: 14px;
     gap: 18px;
+    overflow: hidden;
     // justify-content: center;
     align-items: center;
 
@@ -109,6 +110,8 @@
         color: white;
         display: inline-flex;
         align-items: center;
+      overflow: hidden;
+
         font-size: 1rem;
         padding: 10px 19px;
         // width: 100px;
@@ -119,3 +122,27 @@
      }
  }
  
+
+ @media (max-width: 440px) {
+  .lineMask p{
+    font-size: 2.4rem;
+    padding: 0 15px;
+  }
+
+  .skillCard{
+    width: 700px;
+    height: auto;
+    padding-bottom: 15px;
+  }
+
+  .skillsContainer{
+    padding: 0 15px;
+
+  }
+
+  .container{
+    height: auto;
+
+  }
+
+ }

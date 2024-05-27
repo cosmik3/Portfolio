@@ -69,9 +69,6 @@ export default function ImageGallery() {
             scale: scale9
         }]
 
-        useEffect(() =>{
-            console.log("Image Gallerey scale4 ->", pictures[0].scale.get())
-        }, [scale4])
 
 
     return (
