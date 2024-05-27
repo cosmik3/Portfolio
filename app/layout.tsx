@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-
 const siteDescription = "I am a Software Developer, I'm interested in building iOS and Web apps, coding videogames, and training machine learning models"
 
 export const metadata: Metadata = {
